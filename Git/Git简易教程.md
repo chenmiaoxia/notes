@@ -30,9 +30,11 @@
   - [操作标签](#操作标签)
 
 <!-- /TOC -->
+
 # Git简介
 
 Git是分布式版本控制系统，能记录每次对文件的改动
+
 <img src="img/1.jpg"/>
 
 # 集中式VS分布式
@@ -159,7 +161,7 @@ git checkout -- file可以丢弃工作区的修改：
 <pre><code>$ rm 文件名
 </code></pre>
 要从版本库中删除该文件，那就用命令git rm删掉，并且git commit：
-<pre><code>$ git rm 文件名 
+<pre><code>$ git rm 文件名
 rm 文件名
 $ git commit -m "删除说明"
 </code></pre>
@@ -223,13 +225,17 @@ GitHub允许你添加多个Key。假定你有若干电脑，你一会儿在公�
 假设我们从零开发，那么最好的方式是先创建远程库，然后，从远程库克隆。
 
 首先，登陆GitHub，创建一个新的仓库，名字叫gitskills：
+
 <img src="img/9.png"/>
+
 我们勾选Initialize this repository with a README，这样GitHub会自动为我们创建一个README.md文件。创建完毕后，可以看到README.md文件：
+
 <img src="img/10.png"/>
+
 现在，远程库已经准备好了，下一步是用命令git clone克隆一个本地库
 <pre><code> git clone git@github.com:你的GitHub账号/gitskills.git
 </code></pre>
-，GitHub给出的地址不止一个，还可以用https://github.com/michaelliao/gitskills.git这样的地址。实际上，Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。
+GitHub给出的地址不止一个，还可以用https://github.com/michaelliao/gitskills.git这样的地址。实际上，Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。
 
 使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。
 
@@ -274,7 +280,7 @@ Switched to branch 'dev'
 </code></pre>
 git branch命令会列出所有分支，当前分支前面会标一个*号。
 然后，我们就可以在dev分支上正常提交
-<pre><code>$ git add readme.txt 
+<pre><code>$ git add readme.txt
 $ git commit -m "branch test"
 [dev fec145a] branch test
  1 file changed, 1 insertion(+)
@@ -319,7 +325,7 @@ git status告诉我们冲突的文件：
 </code></pre>
 可以直接查看冲突的内容，Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容，我们修改后保存
 再提交：
-<pre><code>$ git add readme.txt 
+<pre><code>$ git add readme.txt
 $ git commit -m "conflict fixed"
 </code></pre>
 现在，master分支和feature1分支变成了下图所示：
