@@ -3,27 +3,32 @@
 <!-- TOC -->
 
 - [概述](#概述)
-  - [宗旨](#宗旨)
-  - [兼容HTML](#兼容html)
-  - [特殊字符自动转换](#特殊字符自动转换)
-  - [区块元素](#区块元素)
+    - [宗旨](#宗旨)
+    - [兼容HTML](#兼容html)
+    - [特殊字符自动转换](#特殊字符自动转换)
+- [区块元素](#区块元素)
     - [段落和换行](#段落和换行)
     - [标题](#标题)
+    - [这是 H2](#这是-h2)
+                    - [这是 H6](#这是-h6)
+    - [这是 H2](#这是-h2-1)
+        - [这是 H3](#这是-h3)
     - [区块引用Blockquotes](#区块引用blockquotes)
-    - [列表](#列表)
+        - [列表](#列表)
     - [代码区块](#代码区块)
-    - [分隔线](#分隔线)
-  - [区段元素](#区段元素)
+        - [分隔线](#分隔线)
+- [区段元素](#区段元素)
     - [行内式链接](#行内式链接)
     - [参考式链接](#参考式链接)
-  - [强调](#强调)
-  - [代码](#代码)
-  - [图片](#图片)
-    - [行内式](#行内式)
-    - [参考式](#参考式)
-  - [其他](#其他)
+    - [强调](#强调)
+    - [代码](#代码)
+    - [图片](#图片)
+        - [行内式](#行内式)
+        - [参考式](#参考式)
+- [其他](#其他)
     - [自动链接](#自动链接)
     - [反斜杠](#反斜杠)
+- [井字号](#井字号)
 
 <!-- /TOC -->
 
@@ -63,13 +68,13 @@ Markdown的语法目标是：成为一种适用**网络**的书写语言
 * Markdown会自动将<code>&lt;</code> 和<code>&amp;</code>转化为<code>&amp;lt;</code>和<code>&amp;amp;</code>；如果要在文档中插入一个版权符号<code>&copy;</code>，可以写成<code>&amp;copy;</code>
 * 在code范围内，不论是行内和区块，<code>&lt;</code>和<code>&amp;</code>两个符号都一定会被转化成HTML实体，这项特性让你可以很容易地用Markdown写HTML code
 
-## 区块元素
+# 区块元素
 
-### 段落和换行
+## 段落和换行
 
 * 一个Markdown段落是由一个或多个连续的文本行组成，前后默认各有一个空行,如果想要需要自定义插入空行，在插入初先按两个以上的空格然后回车
 
-### 标题
+## 标题
 
 Markdown支持两种标题的语法，类Setext和类atx形式
 
@@ -98,7 +103,7 @@ Markdown支持两种标题的语法，类Setext和类atx形式
 ### 这是 H3 ######
 </code></pre>
 
-### 区块引用Blockquotes
+## 区块引用Blockquotes
 
 * 在 Markdown 文件中建立一个区块引用,在每行的最前面加上<code> &gt; </code>：
 
@@ -204,7 +209,7 @@ Markdown支持有序列表和无序列表
 <pre><code>1986\. What a great season.
 </code></pre>
 
-### 代码区块
+## 代码区块
 
 在 Markdown 中建立代码区块，只要缩进 4 个空格或是 1 个制表符
 <pre><code>这是一个普通段落：
@@ -245,8 +250,8 @@ Markdown 会转换成：
 
 ---------------------------------------
 </code></pre>
-## 区段元素
-### 行内式链接
+# 区段元素
+## 行内式链接
 要建立一个行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如：
 <pre><code>This is [an example](http://example.com/ "Title") inline link.
 
@@ -259,7 +264,7 @@ an example&lt;/a&gt; inline link.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://example.net/"&gt;This link&lt;/a&gt; has no
 title attribute.&lt;/p&gt;
 </code></pre>
-### 参考式链接
+## 参考式链接
 在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：（可以选择性地在两个方括号中间加上一个空格）
 <pre><code>This is [an example] [id] reference-style link.
 </code></pre>
@@ -338,9 +343,9 @@ __double underscores__
 <pre><code>[id]: url/to/image  "Optional title attribute"
 </code></pre>
 
-## 其他
+# 其他
 
-### 自动链接
+## 自动链接
 
 用方括号包起来， Markdown 就会自动把它转成链接
 <pre><code>&lt;http://example.com/&gt;
@@ -349,7 +354,7 @@ Markdown 会转成：
 <pre><code>&lt;a href="http://example.com/"&gt;http://example.com/&lt;/a&gt;
 </code></pre>
 
-### 反斜杠
+## 反斜杠
 Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：
 
 <pre><code>\   反斜线
